@@ -35,3 +35,23 @@ const teamMembers = [
 ];
 //? Cheking array content
 console.table(teamMembers);
+
+const membersGrid = document.getElementById('members-grid');
+//^ -----------------------------------------------------------------------------------------------
+//TODO: Aggiungere commenti
+
+for (let i = 0; i < teamMembers.length; i++) {
+
+    const colElement = document.createElement('div');
+    colElement.classList.add('col-4');
+    colElement.innerHTML = `
+            <h5 class="text-white text-center mt-3">${teamMembers[i].name}</h5>
+            <p class="text-white text-center">${teamMembers[i].position}</p>
+             `;
+
+
+    membersGrid.appendChild(colElement);
+}
+
+//TODO: Finire di implementare l'inserimento dell'immagine
+/* <img src="assets/img/${teamMembers[i].image}" alt="${teamMembers[i].name}">  */ 
